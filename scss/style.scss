@@ -23,7 +23,8 @@ figure {
     font-size: 24px; color: #fff;
   }
 
-  @import '_panel';
+  @import 'panel';
+  @import 'btns';
   
   & > p.copy {
     position: absolute; left: 50%; bottom: 7vh; transform: translateX(-50%);

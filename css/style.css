@@ -58,6 +58,104 @@ figure {
         opacity: 0.7;
         border-radius: 10px;
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05); }
+  figure .btn_prev {
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-20vw, -50%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 15px;
+    cursor: pointer;
+    font-size: 0; }
+    figure .btn_prev span {
+      font: 11px/1 'arial';
+      color: #fff;
+      opacity: 1;
+      transition: 0.5s; }
+    figure .btn_prev::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform-origin: left center;
+      transform: rotate(-180deg);
+      transition: 0.5s; }
+    figure .btn_prev::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      transform-origin: left center;
+      transform: rotate(180deg);
+      transition: 0.5s; }
+    figure .btn_prev:hover span {
+      transform: translateX(100%);
+      opacity: 0; }
+    figure .btn_prev:hover::before {
+      transform: rotate(-30deg); }
+    figure .btn_prev:hover::after {
+      transform: rotate(30deg); }
+  figure .btn_next {
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(20vw, -50%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 15px;
+    cursor: pointer;
+    font-size: 0; }
+    figure .btn_next span {
+      font: 11px/1 'arial';
+      color: #fff;
+      opacity: 1;
+      transition: 0.5s; }
+    figure .btn_next::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform-origin: right center;
+      transform: rotate(-180deg);
+      transition: 0.5s; }
+    figure .btn_next::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      position: absolute;
+      right: 0px;
+      top: 50%;
+      transform-origin: right center;
+      transform: rotate(180deg);
+      transition: 0.5s; }
+    figure .btn_next:hover span {
+      transform: translateX(-100%);
+      opacity: 0; }
+    figure .btn_next:hover::before {
+      transform: rotate(-30deg); }
+    figure .btn_next:hover::after {
+      transform: rotate(30deg); }
   figure > p.copy {
     position: absolute;
     left: 50%;
