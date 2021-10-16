@@ -3,7 +3,7 @@
 
 figure {
   width: 100%; height: 100vh; overflow: hidden; position: relative;
-  background: linear-gradient(84deg, #fb7171, #f5acac);
+  background: linear-gradient(84deg, #71affb, #f5acac);
 
   h1 {
     position: absolute; left: 4vw; top: 7vh;
@@ -26,7 +26,7 @@ figure {
   @import 'panel';
   @import 'btns';
   
-  & > p.copy {
+  > p.copy {
     position: absolute; left: 50%; bottom: 7vh; transform: translateX(-50%);
     font: 12px/1 'arial'; color: #fff; opacity: 0.8; letter-spacing: 1px;
   }
