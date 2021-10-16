@@ -18,10 +18,17 @@ for(let elem of list) {
   let load = elem.querySelector('.load');
 
   play.addEventListener('click', (e) => {
-    e.currentTarget.closest('article').querySelector('.pic').classList.add('on')
+    e.currentTarget.closest('article').querySelector('.pic').classList.add('on');
+    e.currentTarget.closest('article').querySelector('audio').play();
   });
   pause.addEventListener('click', (e) => {
-    e.currentTarget.closest('article').querySelector('.pic').classList.remove('on')
+    e.currentTarget.closest('article').querySelector('.pic').classList.remove('on');
+    e.currentTarget.closest('article').querySelector('audio').pause();
+  });
+  load.addEventListener('click', (e) => {
+    e.currentTarget.closest('article').querySelector('.pic').classList.remove('on');
+    e.currentTarget.closest('article').querySelector('audio').load();
+    e.currentTarget.closest('article').querySelector('audio').pause();
   });
 }
 
@@ -31,16 +38,6 @@ const activation = () => {
   }
   list[active].classList.add('on');
 }
-
-const prevList = () => {
-
-}
-const nextList = () => {
-  if(num > listLength - 1){
-    num = 0;
-  }
-}
-
 
 // btns event
 prevBtn.addEventListener('click', () => {
