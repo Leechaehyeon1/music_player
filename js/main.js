@@ -12,6 +12,19 @@ for(let i = 0; i < listLength; i++){
   list[i].style.transform = `rotate(${deg * i}deg) translateY(-100vh)`;
 }
 
+for(let elem of list) {
+  let play = elem.querySelector('.play');
+  let pause = elem.querySelector('.pause');
+  let load = elem.querySelector('.load');
+
+  play.addEventListener('click', (e) => {
+    e.currentTarget.closest('article').querySelector('.pic').classList.add('on')
+  });
+  pause.addEventListener('click', (e) => {
+    e.currentTarget.closest('article').querySelector('.pic').classList.remove('on')
+  });
+}
+
 const activation = () => {
   for(let elem of list){
     elem.classList.remove('on');

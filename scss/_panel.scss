@@ -31,6 +31,25 @@ section {
           width: 3vw; height: 3vw; border-radius: 50%; background: #fff;
           z-index: 3; position: relative; box-shadow: inset 5px 5px 10px rgba(0,0,0,0.2);
         }
+
+        &.on {
+          &::before {
+            animation: rotation2 4s linear infinite;
+          }
+          &::after {
+            animation: rotation 4s linear infinite;
+          }
+        }
+
+        @keyframes rotation {
+          0% {transform: rotate(0deg);}
+          100% {transform: rotate(360deg);}
+        }
+
+        @keyframes rotation2 {
+          0% {transform: translateY(7%) rotate(0deg);}
+          100% {transform: translateY(7%) rotate(360deg);}
+        }
       }
 
       .txt {
