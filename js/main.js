@@ -12,6 +12,13 @@ for(let i = 0; i < listLength; i++){
   list[i].style.transform = `rotate(${deg * i}deg) translateY(-100vh)`;
 }
 
+const activation = () => {
+  for(let elem of list){
+    elem.classList.remove('on');
+  }
+  list[active].classList.add('on');
+}
+
 const prevList = () => {
 
 }
@@ -27,18 +34,14 @@ prevBtn.addEventListener('click', () => {
   frame.style.transform = `rotate(${deg * ++num}deg)`;
 
   (active === 0) ? active = listLength - 1 : active--;
-  for(let elem of list){
-    elem.classList.remove('on')
-  }
-  list[active].classList.add('on')
+  
+  activation();
 });
 
 nextBtn.addEventListener('click', () => {
   frame.style.transform = `rotate(${deg * --num}deg)`;
 
   (active === listLength - 1) ? active = 0 : active++;
-  for(let elem of list){
-    elem.classList.remove('on');
-  }
-  list[active].classList.add('on');
+
+  activation();
 });
