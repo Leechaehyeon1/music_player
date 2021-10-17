@@ -28,7 +28,8 @@ for(let elem of list) {
   load.addEventListener('click', (e) => {
     e.currentTarget.closest('article').querySelector('.pic').classList.remove('on');
     e.currentTarget.closest('article').querySelector('audio').load();
-    e.currentTarget.closest('article').querySelector('audio').pause();
+    e.currentTarget.closest('article').querySelector('.pic').classList.add('on');
+    e.currentTarget.closest('article').querySelector('audio').play();
   });
 }
 
